@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import './question.dart';
+import './answer.dart';
 
 void main() {
   runApp(MyApp());
@@ -92,6 +93,7 @@ class MyAppState extends State<MyApp> {
                           answer['text'], () => onAnswerClick(answer['score']));
                     }).toList()
                   ])
-                : Reset(onResetClick, totalScore)));
+                : null));
+    //Reset(onResetClick, totalScore)
   }
 }
