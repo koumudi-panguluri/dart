@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
+import './reset.dart';
 
 void main() {
   runApp(MyApp());
@@ -88,8 +90,8 @@ class MyAppState extends State<MyApp> {
                     ...(questionAnswerList[questionIndex]['answer']
                             as List<Map<String, Object>>)
                         .map((answer) {
-                      // return Answer(
-                      //     answer['text'], () => onAnswerClick(answer['score']));
+                      return Answer(
+                          answer['text'], () => onAnswerClick(answer['score']));
                     }).toList()
                   ])
                 : null));
