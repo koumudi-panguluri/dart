@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './question.dart';
 import './answer.dart';
+import './reset.dart';
 
 void main() {
   runApp(MyApp());
