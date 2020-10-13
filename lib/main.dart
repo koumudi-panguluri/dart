@@ -54,6 +54,24 @@ class MyAppState extends State<MyApp> {
         {'text': 'Bee', 'score': 5}
       ]
     },
+    {
+      'question': 'What\'s your favorite season?',
+      'answer': [
+        {'text': 'Winter', 'score': 9},
+        {'text': 'Summer', 'score': 10},
+        {'text': 'Rainy', 'score': 5},
+        {'text': 'Spring', 'score': 7}
+      ]
+    },
+    {
+      'question': 'What\'s your favorite holiday destination?',
+      'answer': [
+        {'text': 'New-Zealand', 'score': 10},
+        {'text': 'Neatherland', 'score': 9},
+        {'text': 'Zimbabwe', 'score': 7},
+        {'text': 'Sri Lanka', 'score': 5}
+      ]
+    },
   ];
 
   void onAnswerClick(int score) {
@@ -94,7 +112,6 @@ class MyAppState extends State<MyApp> {
                           answer['text'], () => onAnswerClick(answer['score']));
                     }).toList()
                   ])
-                : null));
-    //Reset(onResetClick, totalScore)
+                : Reset(onResetClick, totalScore)));
   }
 }
