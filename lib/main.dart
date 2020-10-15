@@ -72,6 +72,24 @@ class MyAppState extends State<MyApp> {
         {'text': 'Sri Lanka', 'score': 5}
       ]
     },
+    {
+      'question': 'What\'s your favorite fruit?',
+      'answer': [
+        {'text': 'Apple', 'score': 9},
+        {'text': 'Mango', 'score': 10},
+        {'text': 'Orange', 'score': 5},
+        {'text': 'Banana', 'score': 7}
+      ]
+    },
+    {
+      'question': 'What\'s your favorite sport?',
+      'answer': [
+        {'text': 'Football', 'score': 10},
+        {'text': 'Cricket', 'score': 9},
+        {'text': 'Hockey', 'score': 7},
+        {'text': 'Golf', 'score': 5}
+      ]
+    },
   ];
 
   void onAnswerClick(int score) {
