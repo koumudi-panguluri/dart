@@ -12,9 +12,7 @@ class Reset extends StatelessWidget {
             width: double.infinity,
             margin: EdgeInsets.all(25),
             child: Text(
-              'Your Quiz is done..!\n'
-                      'Your total Score is ' +
-                  score.toString(),
+              'Your Quiz is done..!\nYour total Score is ${score.toString()}\nThank you..! :)',
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 25,

@@ -90,6 +90,15 @@ class MyAppState extends State<MyApp> {
         {'text': 'Golf', 'score': 5}
       ]
     },
+    {
+      'question': 'Pick One among the following.',
+      'answer': [
+        {'text': 'I like Friends more than relatives', 'score': 9},
+        {'text': 'I like Family more than Friends', 'score': 10},
+        {'text': 'I like Relatives more than strangers', 'score': 7},
+        {'text': 'I like Strangers more than Family', 'score': 5}
+      ]
+    },
   ];
 
   void onAnswerClick(int score) {
