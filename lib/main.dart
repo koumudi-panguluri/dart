@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   var questionIndex = 0;
   var totalScore = 0;
-  var questionAnswerList = [
+  var questionAnswers = [
     {
       'question': 'What\'s your favorite color?',
       'answer': [
@@ -99,6 +99,13 @@ class MyAppState extends State<MyApp> {
         {'text': 'I like Strangers more than Family', 'score': 5}
       ]
     },
+    {
+      'question': 'Bonus Points. Did you like the Quiz?',
+      'answer': [
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 5},
+      ]
+    },
   ];
 
   void onAnswerClick(int score) {
@@ -106,10 +113,10 @@ class MyAppState extends State<MyApp> {
       questionIndex++;
       totalScore += score;
     });
-    print('Question Index incremented to ' + questionIndex.toString());
-    if (questionIndex >= questionAnswerList.length) {
-      print('You have reached the end of the quiz and the score is : ' +
-          totalScore.toString());
+    print('Question Index incremented to ${questionIndex.toString()}');
+    if (questionIndex >= questionAnswers.length) {
+      print(
+          'You have reached the end of the quiz and the score is : ${totalScore.toString()}');
     }
   }
 
@@ -118,7 +125,7 @@ class MyAppState extends State<MyApp> {
       questionIndex = 0;
       totalScore = 0;
     });
-    print('Question Index reset to ' + questionIndex.toString());
+    print('Question Index reset to ${questionIndex.toString()}');
   }
 
   @override
@@ -128,11 +135,11 @@ class MyAppState extends State<MyApp> {
             appBar: AppBar(
               title: Text('QuizApp'),
             ),
-            body: questionIndex < questionAnswerList.length
+            body: questionIndex < questionAnswers.length
                 ? Column(children: [
-                    Question(questionAnswerList[questionIndex]['question']),
+                    Question(questionAnswers[questionIndex]['question']),
                     // take the entire list, map each answer and send one by one answer to the class Answer //
-                    ...(questionAnswerList[questionIndex]['answer']
+                    ...(questionAnswers[questionIndex]['answer']
                             as List<Map<String, Object>>)
                         .map((answer) {
                       return Answer(
